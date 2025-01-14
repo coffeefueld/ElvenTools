@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "NNN",
+      "N N",
+      "NNN"
+    ],
+    "key": {
+      "N": {
+        "item": "minecraft:gold_nugget"
+      }
+    },
+    "result": {
+      "id": "elventools:gold_coin",
+      "count": 1
+    }
+  }
