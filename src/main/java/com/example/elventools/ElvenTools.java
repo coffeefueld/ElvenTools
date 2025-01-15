@@ -2,7 +2,6 @@ package com.example.elventools;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
-import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -11,8 +10,6 @@ import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.Tiers;
-import net.minecraft.world.item.component.Tool;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
@@ -39,8 +36,8 @@ import net.minecraftforge.registries.RegistryObject;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(ExampleMod.MODID)
-public class ExampleMod
+@Mod(ElvenTools.MODID)
+public class ElvenTools
 {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "elventools";
@@ -116,6 +113,7 @@ public class ExampleMod
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ELVEN_BREAD.get().getDefaultInstance())
             .displayItems((parameters, output) -> {
+                    output.accept(EXAMPLE_BLOCK.get());
                     output.accept(ELVEN_BREAD.get());
                     output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
@@ -123,7 +121,7 @@ public class ExampleMod
                     output.accept(ELVEN_PICKAXE .get());
             }).build());
 
-    public ExampleMod(FMLJavaModLoadingContext context)
+    public ElvenTools(FMLJavaModLoadingContext context)
     {
         IEventBus modEventBus = context.getModEventBus();
 
