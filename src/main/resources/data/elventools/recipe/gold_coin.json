@@ -2,12 +2,15 @@
     "type": "minecraft:crafting_shaped",
     "pattern": [
       "NNN",
-      "N N",
+      "NCN",
       "NNN"
     ],
     "key": {
       "N": {
         "item": "minecraft:gold_nugget"
+      },
+      "C": {
+        "item": "minecraft:copper_ingot"
       }
     },
     "result": {
