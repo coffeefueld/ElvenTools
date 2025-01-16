@@ -1,6 +1,7 @@
 package com.example.elventools;
 
 import com.mojang.logging.LogUtils;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
@@ -8,17 +9,23 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.trading.ItemCost;
+import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.entity.npc.VillagerTrades;
+import net.minecraft.world.entity.npc.VillagerTrades.ItemListing;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.event.village.WandererTradesEvent;
 import net.minecraftforge.common.ForgeTier;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -33,6 +40,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
+
+import java.util.ArrayList;
+import java.util.List;
+
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
@@ -150,6 +161,9 @@ public class ElvenTools
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
+        // Wandering trader trades
+        //VillagerTrades.TRADES.put(new ResourceLocation("elventools", "wandering_trader_trades"), new CustomTradeLoader());
+
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
@@ -164,13 +178,57 @@ public class ElvenTools
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(EXAMPLE_BLOCK_ITEM);
     }
-
+    // Adds trades
+    private static void addTradesToWanderingTrader(List<ItemListing> generic, List<ItemListing> rare) {
+        LOGGER.info("Adding trades to wandering trader");
+        VillagerTrades.WANDERING_TRADER_TRADES.put(1, generic.toArray(new ItemListing[0]));
+        VillagerTrades.WANDERING_TRADER_TRADES.put(2, rare.toArray(new ItemListing[0]));
+        LOGGER.info("Trades added: Generic - {}, Rare - {}", generic.size(), rare.size());
+    }
     // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event)
     {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
+        // Trader
+        LOGGER.info("Server about to start - posting WandererTradesEvent");
+        List<ItemListing> genericTrades = new ArrayList<>();
+        List<ItemListing> rareTrades = new ArrayList<>();
+
+        // Adding custom trades
+        // Generic Trades
+        genericTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 1), //Asking for
+                new ItemStack(ELVEN_BREAD.get(), 1), //Selling
+                10, //Uses
+                5,  //XP
+                0.05F //Price multiplier
+            )
+        );
+        // Rare Trades
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 9), //Asking for
+                new ItemStack(ELVEN_SWORD.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 10), //Asking for
+                new ItemStack(ELVEN_PICKAXE.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+
+        MinecraftForge.EVENT_BUS.post(new WandererTradesEvent(genericTrades, rareTrades));
+        addTradesToWanderingTrader(genericTrades, rareTrades);
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
