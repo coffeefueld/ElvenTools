@@ -60,7 +60,7 @@ public class ElvenTools
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
-
+    
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
@@ -78,6 +78,20 @@ public class ElvenTools
                 .saturationModifier(8f)
                 .build()
             )
+        )
+    );
+    // Theodora Charm
+    public static final RegistryObject<Item> THEODORA_CHARM = ITEMS.register("theodora_charm",
+        () -> new TheodoraCharm(new Item.Properties()
+                    .stacksTo(1)
+                    .fireResistant()
+        )
+    );
+    // Theodora Amulet
+    public static final RegistryObject<Item> THEODORA_AMULET = ITEMS.register("theodora_amulet",
+        () -> new TheodoraAmulet(new Item.Properties()
+                    .stacksTo(1)
+                    .fireResistant()
         )
     );
     // Gold coin
@@ -106,8 +120,8 @@ public class ElvenTools
        () -> new SwordItem(
         ELVEN_STEEL_TIER,
         new Item.Properties()
-        .fireResistant()
         .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 10, -1.5F))
+        .fireResistant()
         )
     );
     // Elven pickaxe
@@ -128,6 +142,8 @@ public class ElvenTools
                     output.accept(ELVEN_BREAD.get());
                     output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
+                    output.accept(THEODORA_CHARM.get());
+                    output.accept(THEODORA_AMULET.get());
                     output.accept(ELVEN_SWORD.get());
                     output.accept(ELVEN_PICKAXE .get());
             }).build());
@@ -226,7 +242,15 @@ public class ElvenTools
                 0.05F //Price multiplier
             )
         );
-
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 10), //Asking for
+                new ItemStack(THEODORA_CHARM.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
         MinecraftForge.EVENT_BUS.post(new WandererTradesEvent(genericTrades, rareTrades));
         addTradesToWanderingTrader(genericTrades, rareTrades);
     }

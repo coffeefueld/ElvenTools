@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      " C ",
+      "CAC",
+      " C "
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:chain"
+      },
+      "A": {
+        "item": "elventools:theodora_charm"
+      }
+    },
+    "result": {
+      "id": "elventools:theodora_amulet",
+      "count": 1
+    }
+  }
