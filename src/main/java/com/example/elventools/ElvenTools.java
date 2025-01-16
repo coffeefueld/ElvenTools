@@ -2,6 +2,8 @@ package com.example.elventools;
 
 import com.mojang.logging.LogUtils;
 
+import com.example.elventools.items.*;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.food.FoodProperties;
