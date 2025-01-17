@@ -1,0 +1,13 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "elventools:item/theodora_amulet"
+    },
+    "display": {
+    "head": {
+      "rotation": [0, 180, 0],
+      "translation": [1, -14, -4],
+      "scale": [1, 1, 1]
+      }
+    }
+}
