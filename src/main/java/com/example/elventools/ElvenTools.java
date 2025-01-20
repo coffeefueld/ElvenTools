@@ -6,6 +6,7 @@ import com.example.elventools.items.*;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -89,7 +90,7 @@ public class ElvenTools
                     .fireResistant()
         )
     );
-    // Theodora Amulet
+    // Theodora Charm
     public static final RegistryObject<Item> THEODORA_AMULET = ITEMS.register("theodora_amulet",
         () -> new TheodoraAmulet(new Item.Properties()
                     .stacksTo(1)
@@ -136,9 +137,10 @@ public class ElvenTools
         )
     );
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
-    public static final RegistryObject<CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder()
+    public static final RegistryObject<CreativeModeTab> CMODE_TAB = CREATIVE_MODE_TABS.register("cmode_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
             .icon(() -> ELVEN_BREAD.get().getDefaultInstance())
+            .title(Component.translatable(MODID + ".cmode_tab"))
             .displayItems((parameters, output) -> {
                     output.accept(EXAMPLE_BLOCK.get());
                     output.accept(ELVEN_BREAD.get());

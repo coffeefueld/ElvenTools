@@ -66,7 +66,7 @@ public class TheodoraAmulet extends Item implements Equipable{
     @Override
     public EquipmentSlot getEquipmentSlot() {
         // Specify the slot where this item should be equipped
-        return EquipmentSlot.HEAD; // Example: Equips in the helmet slot
+        return EquipmentSlot.HEAD;
     }
 
 }
