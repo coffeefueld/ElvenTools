@@ -76,7 +76,6 @@ public class ElvenTools
     public static final RegistryObject<Item> ELVEN_BREAD = ITEMS.register("elven_bread",
         () -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
-                .alwaysEdible()
                 .nutrition(8)
                 .saturationModifier(8f)
                 .build()
