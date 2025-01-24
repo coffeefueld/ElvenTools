@@ -119,7 +119,7 @@ public class ElvenTools
     );
     // Elven sword
     public static final RegistryObject<SwordItem> ELVEN_SWORD = ITEMS.register("elven_sword",
-       () -> new SwordItem(
+       () -> new ElvenSword(
         ELVEN_STEEL_TIER,
         new Item.Properties()
         .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 10, -1.5F))
