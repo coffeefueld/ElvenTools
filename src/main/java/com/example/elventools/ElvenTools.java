@@ -161,7 +161,7 @@ public class ElvenTools
             .displayItems((parameters, output) -> {
                     output.accept(RUBY_ORE_BLOCK.get());
                     output.accept(ELVEN_BREAD.get());
-                    output.accept(ELVEN_STEEL_INGOT.get());
+                    //output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
                     output.accept(THEODORA_CHARM.get());
                     output.accept(THEODORA_AMULET.get());
