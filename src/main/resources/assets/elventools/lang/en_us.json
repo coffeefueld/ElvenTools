@@ -1,7 +1,7 @@
 {
   "elventools.cmode_tab": "Elven Tools",
   "item.elventools.elven_bread": "Elven Bread",
-  "item.elventools.ruby_ore_block": "Ruby Ore",
+  "block.elventools.ruby_ore_block": "Ruby Ore",
   "item.elventools.ruby": "Ruby",
   "item.elventools.elven_sword": "Elven Sword",
   "item.elventools.elven_rapier": "Elven Rapier",
