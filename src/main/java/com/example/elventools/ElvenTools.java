@@ -65,9 +65,9 @@ public class ElvenTools
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Block> EXAMPLE_BLOCK = BLOCKS.register("example_block", () -> new Block(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)));
+    public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block", () -> new DropExperienceBlock(UniformInt.of(4, 10), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(3.0f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<Item> EXAMPLE_BLOCK_ITEM = ITEMS.register("example_block", () -> new BlockItem(EXAMPLE_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
     // Block taggs for elven steel tier
     public static final TagKey<Block> NEEDS_ELVEN_STEEL = BlockTags.NEEDS_DIAMOND_TOOL;
     public static final TagKey<Block> INCORRACT_FOR_ELVEN_STEEL = BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
@@ -103,6 +103,12 @@ public class ElvenTools
     );
     // Elven steel ingot
     public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot",
+        () -> new Item(new Item.Properties()
+            .fireResistant()            
+        )
+    );
+     // Ruby
+    public static final RegistryObject<Item> RUBY = ITEMS.register("ruby",
         () -> new Item(new Item.Properties()
             .fireResistant()            
         )
@@ -150,7 +156,7 @@ public class ElvenTools
             .icon(() -> ELVEN_BREAD.get().getDefaultInstance())
             .title(Component.translatable(MODID + ".cmode_tab"))
             .displayItems((parameters, output) -> {
-                    output.accept(EXAMPLE_BLOCK.get());
+                    output.accept(RUBY_ORE_BLOCK.get());
                     output.accept(ELVEN_BREAD.get());
                     output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
@@ -205,7 +211,7 @@ public class ElvenTools
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-            event.accept(EXAMPLE_BLOCK_ITEM);
+            event.accept(RUBY_ORE_BLOCK_ITEM);
     }
     // Adds trades
     private static void addTradesToWanderingTrader(List<ItemListing> generic, List<ItemListing> rare) {
