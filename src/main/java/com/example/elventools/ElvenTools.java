@@ -69,7 +69,15 @@ public class ElvenTools
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
-    public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block", () -> new DropExperienceBlock(UniformInt.of(4, 10), BlockBehaviour.Properties.of().mapColor(MapColor.STONE).strength(3.0f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+    public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block",
+            () -> new DropExperienceBlock(UniformInt.of(4, 10),
+                     BlockBehaviour.Properties.of()
+                     .mapColor(MapColor.STONE)
+                     .strength(3f)
+                     .sound(SoundType.STONE)
+                     .requiresCorrectToolForDrops()
+            )
+        );
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
     // Block taggs for elven steel tier
@@ -150,7 +158,7 @@ public class ElvenTools
         () -> new PickaxeItem(
         ELVEN_STEEL_TIER,
         new Item.Properties()
-        .attributes(PickaxeItem.createAttributes(ELVEN_STEEL_TIER, 0, 0))
+        .attributes(PickaxeItem.createAttributes(ELVEN_STEEL_TIER, -1f, -2.8f))
         .fireResistant()
         )
     );
