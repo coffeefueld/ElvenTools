@@ -1,6 +1,8 @@
 package com.example.elventools.items;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -57,6 +59,14 @@ public class ElvenSword extends SwordItem {
             if (level.isNight()) {
                 
             }
+            player.addEffect(new MobEffectInstance(
+                    MobEffects.LUCK,
+                    60,                     // Duration in ticks, 20 ticks = 1 second
+                    1,                      // Amplifier, 0 = level I, 1 = level II...
+                    true,                   // Ambient effect
+                    false,                  // Show particles
+                    false                   // Show effect icon
+            ));
         }
     }
 

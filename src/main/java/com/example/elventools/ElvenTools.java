@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
+import com.example.elventools.items.ElvenPickaxe;
 import com.example.elventools.items.ElvenSword;
 import com.example.elventools.items.TheodoraAmulet;
 import com.example.elventools.items.TheodoraCharm;
@@ -164,7 +165,7 @@ public class ElvenTools
     );
     // Elven pickaxe
     public static final RegistryObject<PickaxeItem> ELVEN_PICKAXE = ITEMS.register("elven_pickaxe",
-        () -> new PickaxeItem(
+        () -> new ElvenPickaxe(
         ELVEN_STEEL_TIER,
         new Item.Properties()
         .attributes(PickaxeItem.createAttributes(ELVEN_STEEL_TIER, -1f, -2.8f))

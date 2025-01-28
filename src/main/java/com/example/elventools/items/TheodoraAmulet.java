@@ -28,7 +28,7 @@ public class TheodoraAmulet extends Item implements Equipable{
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean isSelected) {
-        if (entity instanceof Player player) { // Check if the entity is a player
+        if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player
             if (this.isEquippedBy(player) || (isSelected || player.getOffhandItem() == stack)) { // Checks if the item is worn or held by the player
                 player.addEffect(new MobEffectInstance(
                     MobEffects.MOVEMENT_SPEED,
@@ -55,6 +55,14 @@ public class TheodoraAmulet extends Item implements Equipable{
                     false                   // Show effect icon
                 ));
             }
+            player.addEffect(new MobEffectInstance(
+                    MobEffects.LUCK,
+                    60,                     // Duration in ticks, 20 ticks = 1 second
+                    1,                      // Amplifier, 0 = level I, 1 = level II...
+                    true,                   // Ambient effect
+                    false,                  // Show particles
+                    false                   // Show effect icon
+            ));
         }
     }
 
