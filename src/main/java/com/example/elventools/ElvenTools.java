@@ -144,6 +144,15 @@ public class ElvenTools
         .fireResistant()
         )
     );
+    // Elven sword V2
+    public static final RegistryObject<SwordItem> ELVEN_SWORD_V2 = ITEMS.register("elven_sword_v2",
+       () -> new ElvenSword(
+        ELVEN_STEEL_TIER,
+        new Item.Properties()
+        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 10, -1.5F))
+        .fireResistant()
+        )
+    );
     //Elven Rapier
     public static final RegistryObject<SwordItem> ELVEN_RAPIER = ITEMS.register("elven_rapier",
        () -> new SwordItem(
@@ -176,6 +185,7 @@ public class ElvenTools
                     output.accept(THEODORA_CHARM.get());
                     output.accept(THEODORA_AMULET.get());
                     output.accept(ELVEN_SWORD.get());
+                    output.accept(ELVEN_SWORD_V2.get());
                     output.accept(ELVEN_RAPIER.get());
                     output.accept(ELVEN_PICKAXE .get());
             }).build());
