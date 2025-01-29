@@ -114,6 +114,11 @@ public class ElvenTools
         () -> new Item(new Item.Properties()
         )
     );
+    // Elven star coin
+    public static final RegistryObject<Item> ELVEN_STAR_COIN = ITEMS.register("elven_star_coin",
+        () -> new Item(new Item.Properties()
+        )
+    );
     // Elven steel ingot
     public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot",
         () -> new Item(new Item.Properties()
@@ -183,6 +188,7 @@ public class ElvenTools
                     output.accept(ELVEN_BREAD.get());
                     //output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
+                    output.accept(ELVEN_STAR_COIN.get());
                     output.accept(THEODORA_CHARM.get());
                     output.accept(THEODORA_AMULET.get());
                     output.accept(ELVEN_SWORD.get());
