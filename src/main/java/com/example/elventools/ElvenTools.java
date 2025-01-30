@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 
 import com.example.elventools.items.ElvenPickaxe;
+import com.example.elventools.items.ElvenRapier;
 import com.example.elventools.items.ElvenSword;
 import com.example.elventools.items.TheodoraAmulet;
 import com.example.elventools.items.TheodoraCharm;
@@ -83,7 +84,7 @@ public class ElvenTools
     public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
     // Block taggs for elven steel tier
     public static final TagKey<Block> NEEDS_ELVEN_STEEL = BlockTags.NEEDS_DIAMOND_TOOL;
-    public static final TagKey<Block> INCORRACT_FOR_ELVEN_STEEL = BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
+    public static final TagKey<Block> INCORRECT_FOR_ELVEN_STEEL = BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
 
     // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
     public static final RegistryObject<Item> ELVEN_BREAD = ITEMS.register("elven_bread",
@@ -149,7 +150,7 @@ public class ElvenTools
     15, 
     NEEDS_ELVEN_STEEL, 
     () -> Ingredient.of(ELVEN_STEEL_INGOT.get()), 
-    INCORRACT_FOR_ELVEN_STEEL
+    INCORRECT_FOR_ELVEN_STEEL
     );
     // Elven sword
     public static final RegistryObject<SwordItem> ELVEN_SWORD = ITEMS.register("elven_sword",
@@ -171,7 +172,7 @@ public class ElvenTools
     );
     //Elven Rapier
     public static final RegistryObject<SwordItem> ELVEN_RAPIER = ITEMS.register("elven_rapier",
-       () -> new SwordItem(
+       () -> new ElvenRapier(
         ELVEN_STEEL_TIER,
         new Item.Properties()
         .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 4, 2))
