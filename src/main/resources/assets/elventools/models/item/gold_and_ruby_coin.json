@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/generated",
+    "textures": {
+        "layer0": "elventools:item/gold_and_ruby_coin"
+    }
+}
