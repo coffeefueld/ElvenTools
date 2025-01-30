@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "elventools:item/elven_star_coin"
+        "layer0": "elventools:item/gold_and_star_coin"
     }
 }
