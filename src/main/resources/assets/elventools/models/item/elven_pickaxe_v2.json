@@ -1,0 +1,6 @@
+{
+    "parent": "minecraft:item/handheld",
+    "textures": {
+        "layer0": "elventools:item/elven_pickaxe_v2"
+    }
+}
