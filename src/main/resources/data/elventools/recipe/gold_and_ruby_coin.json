@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "elventools:gold_coin"
+      },
+      {
+        "item": "elventools:ruby"
+      }  
+    ],
+    "result": {
+      "id": "elventools:gold_and_ruby_coin",
+      "count": 1
+    }
+  }
