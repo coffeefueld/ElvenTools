@@ -119,6 +119,16 @@ public class ElvenTools
         () -> new Item(new Item.Properties()
         )
     );
+    // Gold and ruby coin
+     public static final RegistryObject<Item> GOLD_AND_RUBY_COIN = ITEMS.register("gold_and_ruby_coin",
+        () -> new Item(new Item.Properties()
+        )
+    );
+    // Gold and emerald coin
+    public static final RegistryObject<Item> GOLD_AND_EMERALD_COIN = ITEMS.register("gold_and_emerald_coin",
+        () -> new Item(new Item.Properties()
+        )
+    );
     // Elven steel ingot
     public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot",
         () -> new Item(new Item.Properties()
