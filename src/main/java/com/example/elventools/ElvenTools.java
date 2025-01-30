@@ -187,6 +187,15 @@ public class ElvenTools
         .fireResistant()
         )
     );
+    // Elven pickaxe V2
+    public static final RegistryObject<PickaxeItem> ELVEN_PICKAXE_V2 = ITEMS.register("elven_pickaxe_v2",
+        () -> new ElvenPickaxe(
+        ELVEN_STEEL_TIER,
+        new Item.Properties()
+        .attributes(PickaxeItem.createAttributes(ELVEN_STEEL_TIER, 3f, -3.5f))
+        .fireResistant()
+        )
+    );
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> CMODE_TAB = CREATIVE_MODE_TABS.register("cmode_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
@@ -206,7 +215,9 @@ public class ElvenTools
                     output.accept(ELVEN_SWORD.get());
                     output.accept(ELVEN_SWORD_V2.get());
                     output.accept(ELVEN_RAPIER.get());
-                    output.accept(ELVEN_PICKAXE .get());
+                    output.accept(ELVEN_PICKAXE.get());
+                    output.accept(ELVEN_PICKAXE_V2.get());
+
             }).build());
 
     public ElvenTools(FMLJavaModLoadingContext context)
