@@ -184,7 +184,7 @@ public class ElvenTools
        () -> new ElvenRapier(
         ELVEN_STEEL_TIER,
         new Item.Properties()
-        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 5, 1.5))
+        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 5, 1.5f))
         .fireResistant()
         )
     );
