@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "elventools:gold_coin"
+      },
+      {
+        "item": "minecraft:nether_star"
+      }  
+    ],
+    "result": {
+      "id": "elventools:gold_and_star_coin",
+      "count": 1
+    }
+  }
