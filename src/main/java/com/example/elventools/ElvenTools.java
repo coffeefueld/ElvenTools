@@ -178,7 +178,17 @@ public class ElvenTools
         .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 4, 2))
         .fireResistant()
         )
+    );    
+    //Elven Rapier V2
+    public static final RegistryObject<SwordItem> ELVEN_RAPIER_V2 = ITEMS.register("elven_rapier_v2",
+       () -> new ElvenRapier(
+        ELVEN_STEEL_TIER,
+        new Item.Properties()
+        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 5, 1.5))
+        .fireResistant()
+        )
     );
+    
     // Elven pickaxe
     public static final RegistryObject<PickaxeItem> ELVEN_PICKAXE = ITEMS.register("elven_pickaxe",
         () -> new ElvenPickaxe(
@@ -216,6 +226,7 @@ public class ElvenTools
                     output.accept(ELVEN_SWORD.get());
                     output.accept(ELVEN_SWORD_V2.get());
                     output.accept(ELVEN_RAPIER.get());
+                    output.accept(ELVEN_RAPIER_V2.get());
                     output.accept(ELVEN_PICKAXE.get());
                     output.accept(ELVEN_PICKAXE_V2.get());
 
