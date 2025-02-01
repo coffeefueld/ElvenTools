@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
+import com.example.elventools.blocks.ElvenParsnipCropBlock;
 import com.example.elventools.items.ElvenPickaxe;
 import com.example.elventools.items.ElvenRapier;
 import com.example.elventools.items.ElvenSword;
@@ -25,6 +26,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemNameBlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.SwordItem;
@@ -34,6 +36,7 @@ import net.minecraft.world.item.trading.ItemCost;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.ComposterBlock;
 import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -70,6 +73,8 @@ public class ElvenTools
     // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     
+    /* Blocks */
+
     // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block",
             () -> new DropExperienceBlock(UniformInt.of(4, 10),
@@ -82,11 +87,19 @@ public class ElvenTools
         );
     // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
+    
+    public static final RegistryObject<Block> ELVEN_PARSNIP_CROP = BLOCKS.register("elven_parsnip_crop",
+                () -> new ElvenParsnipCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+
+    /* Tags */
+
     // Block taggs for elven steel tier
     public static final TagKey<Block> NEEDS_ELVEN_STEEL = BlockTags.NEEDS_DIAMOND_TOOL;
     public static final TagKey<Block> INCORRECT_FOR_ELVEN_STEEL = BlockTags.INCORRECT_FOR_DIAMOND_TOOL;
 
-    // Creates a new food item with the id "examplemod:example_id", nutrition 1 and saturation 2
+    /* Food and Husbandry */
+
+    // Elven Bread
     public static final RegistryObject<Item> ELVEN_BREAD = ITEMS.register("elven_bread",
         () -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
@@ -96,20 +109,20 @@ public class ElvenTools
             )
         )
     );
-    // Theodora Charm
-    public static final RegistryObject<Item> THEODORA_CHARM = ITEMS.register("theodora_charm",
-        () -> new TheodoraCharm(new Item.Properties()
-                    .stacksTo(1)
-                    .fireResistant()
+
+    // Elven Parsnip
+    public static final RegistryObject<Item> ELVEN_PARSNIP = ITEMS.register("elven_parsnip",
+        () -> new ItemNameBlockItem(ELVEN_PARSNIP_CROP.get() , new Item.Properties()
+            .food(new FoodProperties.Builder()
+                .nutrition(2)
+                .saturationModifier(4f)
+                .build()
+            )
         )
     );
-    // Theodora Charm
-    public static final RegistryObject<Item> THEODORA_AMULET = ITEMS.register("theodora_amulet",
-        () -> new TheodoraAmulet(new Item.Properties()
-                    .stacksTo(1)
-                    .fireResistant()
-        )
-    );
+
+    /* Coins and Gems */
+
     // Gold coin
     public static final RegistryObject<Item> GOLD_COIN = ITEMS.register("gold_coin",
         () -> new Item(new Item.Properties()
@@ -142,6 +155,9 @@ public class ElvenTools
             .fireResistant()            
         )
     );
+
+    /* Tools */
+
     // Elven steel tier
     public static final Tier ELVEN_STEEL_TIER = new ForgeTier(
     4000, 
@@ -166,7 +182,7 @@ public class ElvenTools
        () -> new ElvenSword(
         ELVEN_STEEL_TIER,
         new Item.Properties()
-        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 10, -1.5F))
+        .attributes(SwordItem.createAttributes(ELVEN_STEEL_TIER, 12, -2.2F))
         .fireResistant()
         )
     );
@@ -207,6 +223,24 @@ public class ElvenTools
         .fireResistant()
         )
     );
+    
+    /* Novelty Items */
+    
+    // Theodora Charm
+    public static final RegistryObject<Item> THEODORA_CHARM = ITEMS.register("theodora_charm",
+        () -> new TheodoraCharm(new Item.Properties()
+                    .stacksTo(1)
+                    .fireResistant()
+        )
+    );
+    // Theodora Amulet
+    public static final RegistryObject<Item> THEODORA_AMULET = ITEMS.register("theodora_amulet",
+        () -> new TheodoraAmulet(new Item.Properties()
+                    .stacksTo(1)
+                    .fireResistant()
+        )
+    );
+
     // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> CMODE_TAB = CREATIVE_MODE_TABS.register("cmode_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
@@ -216,6 +250,7 @@ public class ElvenTools
                     output.accept(RUBY_ORE_BLOCK.get());
                     output.accept(RUBY.get());
                     output.accept(ELVEN_BREAD.get());
+                    output.accept(ELVEN_PARSNIP.get());
                     //output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
                     output.accept(GOLD_AND_RUBY_COIN.get());
@@ -270,6 +305,11 @@ public class ElvenTools
         LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
+
+        /* Making parsnip compostable */
+        event.enqueueWork(() -> {
+            ComposterBlock.COMPOSTABLES.put(ELVEN_PARSNIP.get(), 0.4F);
+        });
     }
 
     // Add the example block item to the building blocks tab
@@ -297,6 +337,7 @@ public class ElvenTools
         List<ItemListing> rareTrades = new ArrayList<>();
 
         // Adding custom trades
+
         // Generic Trades
         genericTrades.add(
             (entity, random) -> new MerchantOffer(
@@ -307,6 +348,7 @@ public class ElvenTools
                 0.05F //Price multiplier
             )
         );
+
         // Rare Trades
         rareTrades.add(
             (entity, random) -> new MerchantOffer(

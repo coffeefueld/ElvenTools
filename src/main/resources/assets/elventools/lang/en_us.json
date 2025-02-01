@@ -1,7 +1,9 @@
 {
   "elventools.cmode_tab": "Elven Tools",
   "item.elventools.elven_bread": "Elven Bread",
+  "item.elventools.elven_parsnip": "Elven Parsnip",
   "block.elventools.ruby_ore_block": "Ruby Ore",
+  "block.elventools.elven_parsnip_crop": "Elven Parsnip Crop",
   "item.elventools.ruby": "Ruby",
   "item.elventools.elven_sword": "Elven Sword",
   "item.elventools.elven_sword_v2": "Elven Sword",
