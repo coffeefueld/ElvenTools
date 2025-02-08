@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "key": {
+      "R": {
+        "item": "elventools:ruby"
+      }
+    },
+    "pattern": [
+      "RRR",
+      "RRR",
+      "RRR"
+    ],
+    "result": {
+      "count": 1,
+      "id": "elventools:ruby_block"
+    }
+  }
