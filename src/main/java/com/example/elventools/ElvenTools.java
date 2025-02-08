@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 
 import com.example.elventools.blocks.ElvenParsnipCropBlock;
+import com.example.elventools.blocks.ElvenCherryTomatoesCropBlock;
 import com.example.elventools.items.ElvenPickaxe;
 import com.example.elventools.items.ElvenRapier;
 import com.example.elventools.items.ElvenSword;
@@ -90,7 +91,8 @@ public class ElvenTools
     
     public static final RegistryObject<Block> ELVEN_PARSNIP_CROP = BLOCKS.register("elven_parsnip_crop",
                 () -> new ElvenParsnipCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
-
+     public static final RegistryObject<Block> ELVEN_CHERRY_TOMATOES_CROP = BLOCKS.register("elven_cherry_tomatoes_crop",
+                () -> new ElvenCherryTomatoesCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     /* Tags */
 
     // Block taggs for elven steel tier
@@ -115,7 +117,17 @@ public class ElvenTools
         () -> new ItemNameBlockItem(ELVEN_PARSNIP_CROP.get() , new Item.Properties()
             .food(new FoodProperties.Builder()
                 .nutrition(2)
-                .saturationModifier(4f)
+                .saturationModifier(2f)
+                .build()
+            )
+        )
+    );
+    // Elven Cherry Tomatoes
+    public static final RegistryObject<Item> ELVEN_CHERRY_TOMATOES = ITEMS.register("elven_cherry_tomatoes",
+        () -> new ItemNameBlockItem(ELVEN_CHERRY_TOMATOES_CROP.get() , new Item.Properties()
+            .food(new FoodProperties.Builder()
+                .nutrition(3)
+                .saturationModifier(2f)
                 .build()
             )
         )
@@ -251,6 +263,7 @@ public class ElvenTools
                     output.accept(RUBY.get());
                     output.accept(ELVEN_BREAD.get());
                     output.accept(ELVEN_PARSNIP.get());
+                    output.accept(ELVEN_CHERRY_TOMATOES.get());
                     //output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
                     output.accept(GOLD_AND_RUBY_COIN.get());
@@ -306,10 +319,12 @@ public class ElvenTools
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
 
-        /* Making parsnip compostable */
+        /* Making parsnip and cherry tomatoes compostable */
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ELVEN_PARSNIP.get(), 0.4F);
+            ComposterBlock.COMPOSTABLES.put(ELVEN_CHERRY_TOMATOES.get(), 0.4F);
         });
+    
     }
 
     // Add the example block item to the building blocks tab
