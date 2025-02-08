@@ -406,7 +406,7 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 11), //Asking for
                 new ItemStack(ELVEN_PICKAXE.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
@@ -425,7 +425,7 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_AND_RUBY_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 11), //Asking for
                 new ItemStack(ELVEN_PICKAXE.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
@@ -444,7 +444,7 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 11), //Asking for
                 new ItemStack(ELVEN_PICKAXE_V2.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
@@ -463,7 +463,7 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_AND_RUBY_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 11), //Asking for
                 new ItemStack(ELVEN_PICKAXE_V2.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
@@ -473,7 +473,7 @@ public class ElvenTools
 
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_AND_STAR_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_STAR_COIN.get(), 1), //Asking for
                 new ItemStack(THEODORA_CHARM.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
