@@ -1,6 +1,6 @@
 {
     "parent": "minecraft:item/generated",
     "textures": {
-        "layer0": "elventools:item/roast_elven_parsnip"
+        "layer0": "elventools:item/roasted_elven_parsnip"
     }
 }

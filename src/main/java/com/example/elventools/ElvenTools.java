@@ -5,8 +5,8 @@ import java.util.List;
 
 import org.slf4j.Logger;
 
-import com.example.elventools.blocks.ElvenParsnipCropBlock;
 import com.example.elventools.blocks.ElvenCherryTomatoesCropBlock;
+import com.example.elventools.blocks.ElvenParsnipCropBlock;
 import com.example.elventools.items.ElvenPickaxe;
 import com.example.elventools.items.ElvenRapier;
 import com.example.elventools.items.ElvenSword;
@@ -76,7 +76,6 @@ public class ElvenTools
     
     /* Blocks */
 
-    // Creates a new Block with the id "examplemod:example_block", combining the namespace and path
     public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block",
             () -> new DropExperienceBlock(UniformInt.of(4, 10),
                      BlockBehaviour.Properties.of()
@@ -85,14 +84,24 @@ public class ElvenTools
                      .sound(SoundType.STONE)
                      .requiresCorrectToolForDrops()
             )
-        );
-    // Creates a new BlockItem with the id "examplemod:example_block", combining the namespace and path
+    );
+    
     public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
     
+    public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK))
+
+    );
+
+    public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(RUBY_BLOCK.get(), new Item.Properties()));
+
+
     public static final RegistryObject<Block> ELVEN_PARSNIP_CROP = BLOCKS.register("elven_parsnip_crop",
                 () -> new ElvenParsnipCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
-     public static final RegistryObject<Block> ELVEN_CHERRY_TOMATOES_CROP = BLOCKS.register("elven_cherry_tomatoes_crop",
+    
+    public static final RegistryObject<Block> ELVEN_CHERRY_TOMATOES_CROP = BLOCKS.register("elven_cherry_tomatoes_crop",
                 () -> new ElvenCherryTomatoesCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
+    
     /* Tags */
 
     // Block taggs for elven steel tier
@@ -116,8 +125,18 @@ public class ElvenTools
     public static final RegistryObject<Item> ELVEN_PARSNIP = ITEMS.register("elven_parsnip",
         () -> new ItemNameBlockItem(ELVEN_PARSNIP_CROP.get() , new Item.Properties()
             .food(new FoodProperties.Builder()
-                .nutrition(2)
+                .nutrition(1)
                 .saturationModifier(2f)
+                .build()
+            )
+        )
+    );
+    // Roast Elven Parsnip
+    public static final RegistryObject<Item> ROASTED_ELVEN_PARSNIP = ITEMS.register("roasted_elven_parsnip",
+        () -> new ItemNameBlockItem(ELVEN_PARSNIP_CROP.get() , new Item.Properties()
+            .food(new FoodProperties.Builder()
+                .nutrition(4)
+                .saturationModifier(3f)
                 .build()
             )
         )
@@ -260,9 +279,11 @@ public class ElvenTools
             .title(Component.translatable(MODID + ".cmode_tab"))
             .displayItems((parameters, output) -> {
                     output.accept(RUBY_ORE_BLOCK.get());
+                    output.accept(RUBY_BLOCK.get());
                     output.accept(RUBY.get());
                     output.accept(ELVEN_BREAD.get());
                     output.accept(ELVEN_PARSNIP.get());
+                    output.accept(ROASTED_ELVEN_PARSNIP.get());
                     output.accept(ELVEN_CHERRY_TOMATOES.get());
                     //output.accept(ELVEN_STEEL_INGOT.get());
                     output.accept(GOLD_COIN.get());
@@ -363,11 +384,20 @@ public class ElvenTools
                 0.05F //Price multiplier
             )
         );
+        genericTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 1), //Asking for
+                new ItemStack(ELVEN_PARSNIP.get(), 3), //Selling
+                10, //Uses
+                5,  //XP
+                0.05F //Price multiplier
+            )
+        );
 
         // Rare Trades
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_COIN.get(), 9), //Asking for
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 9), //Asking for
                 new ItemStack(ELVEN_SWORD.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
@@ -376,8 +406,18 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 10), //Asking for
                 new ItemStack(ELVEN_PICKAXE.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 9), //Asking for
+                new ItemStack(ELVEN_SWORD.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
                 0.05F //Price multiplier
@@ -385,7 +425,55 @@ public class ElvenTools
         );
         rareTrades.add(
             (entity, random) -> new MerchantOffer(
-                new ItemCost(GOLD_COIN.get(), 10), //Asking for
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 10), //Asking for
+                new ItemStack(ELVEN_PICKAXE.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 9), //Asking for
+                new ItemStack(ELVEN_SWORD_V2.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_EMERALD_COIN.get(), 10), //Asking for
+                new ItemStack(ELVEN_PICKAXE_V2.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 9), //Asking for
+                new ItemStack(ELVEN_SWORD_V2.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_RUBY_COIN.get(), 10), //Asking for
+                new ItemStack(ELVEN_PICKAXE_V2.get(), 1), //Selling
+                1, //Uses 
+                20, //XP
+                0.05F //Price multiplier
+            )
+        );
+
+        rareTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_AND_STAR_COIN.get(), 10), //Asking for
                 new ItemStack(THEODORA_CHARM.get(), 1), //Selling
                 1, //Uses 
                 20, //XP
