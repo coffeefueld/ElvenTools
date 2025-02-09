@@ -22,7 +22,8 @@ public class ElvenSword extends SwordItem {
         super(tier, prop);
     }
 
-    private void repacePreviousLight(Level level) {
+    // Replaces the previous light block with an air block 
+    private void replacePreviousLight(Level level) { 
         BlockState previousBlockState = level.getBlockState(previousPos);
         if (previousBlockState.is(Blocks.LIGHT)) {
             level.setBlockAndUpdate(previousPos, Blocks.AIR.defaultBlockState()); // Set block on previous position back to air
@@ -32,33 +33,29 @@ public class ElvenSword extends SwordItem {
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean isSelected) {
         if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player
-            if((isSelected || player.getOffhandItem() == stack)){
-                BlockPos currentPos = player.blockPosition().above();
-                BlockState currentState = level.getBlockState(currentPos);
+            if((isSelected || player.getOffhandItem() == stack)){ // Checks if the player is holding the sword
+                BlockPos currentPos = player.blockPosition().above(); // Gets current block state, returning the block that corresponds to the upper half of the palyer
+                BlockState currentState = level.getBlockState(currentPos); // Gets the state of the block
                 
-                if (!(player.isInWall())) {
+                if (!(player.isInWall())) { // Checks if player is in a block, i.e. grass, water etc...
                     // Replace previous block
                     if (previousPos != null && !previousPos.equals(currentPos)) {
-                        repacePreviousLight(level);
+                        replacePreviousLight(level);
                     }
-                
 
                     // Replace current block with light
                     if (currentState.isAir()) {
-                        level.setBlockAndUpdate(currentPos, Blocks.LIGHT.defaultBlockState());
+                        level.setBlockAndUpdate(currentPos, Blocks.LIGHT.defaultBlockState()); // Replaces current block with a light block
                     }
                 
                     // Update the previous position
                     previousPos = currentPos;
                 }
-            } else if (previousPos != null) {
-                repacePreviousLight(level);
+            } else if (previousPos != null) { 
+                replacePreviousLight(level);
                 previousPos = null;
             }
-        
-            if (level.isNight()) {
-                
-            }
+            // Gives the player luck
             player.addEffect(new MobEffectInstance(
                     MobEffects.LUCK,
                     60,                     // Duration in ticks, 20 ticks = 1 second

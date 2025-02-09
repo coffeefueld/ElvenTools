@@ -19,21 +19,25 @@ public class ElvenParsnipCropBlock extends CropBlock{
         
     }
     
+    // Seeds used to plant the crop
     @Override
     protected ItemLike getBaseSeedId() { 
         return ElvenTools.ELVEN_PARSNIP.get();
     }
 
+    // Age
     @Override
     public IntegerProperty getAgeProperty() {
         return AGE;
     }
 
+    // Max age
     @Override
     public int getMaxAge() {
         return MAX_AGE;
     }
 
+    // Creates block states
     @Override
     protected void createBlockStateDefinition(Builder<Block, BlockState> p_52286_) {
         p_52286_.add(AGE);
