@@ -31,7 +31,7 @@ public class ElvenSword extends SwordItem {
 
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean isSelected) {
-        if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player and 
+        if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player
             if((isSelected || player.getOffhandItem() == stack)){
                 BlockPos currentPos = player.blockPosition().above();
                 BlockState currentState = level.getBlockState(currentPos);

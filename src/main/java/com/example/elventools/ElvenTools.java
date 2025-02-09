@@ -10,6 +10,7 @@ import com.example.elventools.blocks.ElvenParsnipCropBlock;
 import com.example.elventools.items.ElvenPickaxe;
 import com.example.elventools.items.ElvenRapier;
 import com.example.elventools.items.ElvenSword;
+import com.example.elventools.items.ParsnipAndPotatoStew;
 import com.example.elventools.items.TheodoraAmulet;
 import com.example.elventools.items.TheodoraCharm;
 import com.mojang.logging.LogUtils;
@@ -67,17 +68,18 @@ public class ElvenTools
     public static final String MODID = "elventools";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "examplemod" namespace
+    // Create a Deferred Register to hold Blocks which will all be registered under the "elventools" namespace
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    // Create a Deferred Register to hold Items which will all be registered under the "examplemod" namespace
+    // Create a Deferred Register to hold Items which will all be registered under the "elventools" namespace
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "examplemod" namespace
+    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "elventools" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
     
     /* Blocks */
 
+    // Ruby Ore Block
     public static final RegistryObject<DropExperienceBlock> RUBY_ORE_BLOCK = BLOCKS.register("ruby_ore_block",
-            () -> new DropExperienceBlock(UniformInt.of(4, 10),
+            () -> new DropExperienceBlock(UniformInt.of(4, 10), //Experience drop range 
                      BlockBehaviour.Properties.of()
                      .mapColor(MapColor.STONE)
                      .strength(3f)
@@ -86,19 +88,23 @@ public class ElvenTools
             )
     );
     
+    //Ruby Ore Block item
     public static final RegistryObject<Item> RUBY_ORE_BLOCK_ITEM = ITEMS.register("ruby_ore_block", () -> new BlockItem(RUBY_ORE_BLOCK.get(), new Item.Properties()));
     
+    //Ruby Block 
     public static final RegistryObject<Block> RUBY_BLOCK = BLOCKS.register("ruby_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK))
 
     );
 
+    //Ruby Block item
     public static final RegistryObject<Item> RUBY_BLOCK_ITEM = ITEMS.register("ruby_block", () -> new BlockItem(RUBY_BLOCK.get(), new Item.Properties()));
 
-
+    //Elven Parsnip Crop Block
     public static final RegistryObject<Block> ELVEN_PARSNIP_CROP = BLOCKS.register("elven_parsnip_crop",
                 () -> new ElvenParsnipCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     
+    //Elven Cherry Tomatoes Crop Block
     public static final RegistryObject<Block> ELVEN_CHERRY_TOMATOES_CROP = BLOCKS.register("elven_cherry_tomatoes_crop",
                 () -> new ElvenCherryTomatoesCropBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.WHEAT)));
     
@@ -120,7 +126,7 @@ public class ElvenTools
             )
         )
     );
-
+   
     // Elven Parsnip
     public static final RegistryObject<Item> ELVEN_PARSNIP = ITEMS.register("elven_parsnip",
         () -> new ItemNameBlockItem(ELVEN_PARSNIP_CROP.get() , new Item.Properties()
@@ -143,7 +149,7 @@ public class ElvenTools
     );
     // Elven Cherry Tomatoes
     public static final RegistryObject<Item> ELVEN_CHERRY_TOMATOES = ITEMS.register("elven_cherry_tomatoes",
-        () -> new ItemNameBlockItem(ELVEN_CHERRY_TOMATOES_CROP.get() , new Item.Properties()
+        () -> new Item(new Item.Properties()
             .food(new FoodProperties.Builder()
                 .nutrition(3)
                 .saturationModifier(2f)
@@ -151,6 +157,14 @@ public class ElvenTools
             )
         )
     );
+    // Elven Cherry Tomatoes seeds
+    public static final RegistryObject<Item> ELVEN_CHERRY_TOMATOES_SEEDS = ITEMS.register("elven_cherry_tomatoes_seeds",
+        () -> new ItemNameBlockItem(ELVEN_CHERRY_TOMATOES_CROP.get() , new Item.Properties()
+        )
+    );
+    // Parsnip and potato stew
+    public static final RegistryObject<Item> PARSNIP_AND_POTATO_STEW = ITEMS.register("parsnip_and_potato_stew",
+    () -> new ParsnipAndPotatoStew(new Item.Properties().stacksTo(1)));
 
     /* Coins and Gems */
 
@@ -174,7 +188,7 @@ public class ElvenTools
         () -> new Item(new Item.Properties()
         )
     );
-    // Elven steel ingot
+    // Elven steel ingot, it's necessary for the elven steel tier, it's not used in game
     public static final RegistryObject<Item> ELVEN_STEEL_INGOT = ITEMS.register("elven_steel_ingot",
         () -> new Item(new Item.Properties()
             .fireResistant()            
@@ -191,14 +205,15 @@ public class ElvenTools
 
     // Elven steel tier
     public static final Tier ELVEN_STEEL_TIER = new ForgeTier(
-    4000, 
-    20.0F, 
-    8,
-    15, 
+    4000, //Durability
+    20.0F, //Mining Speed
+    8, //Attack Damage Bonus
+    15, //Enchantment Value, it's not used, but it's necessary for the constructor to work
     NEEDS_ELVEN_STEEL, 
     () -> Ingredient.of(ELVEN_STEEL_INGOT.get()), 
     INCORRECT_FOR_ELVEN_STEEL
     );
+
     // Elven sword
     public static final RegistryObject<SwordItem> ELVEN_SWORD = ITEMS.register("elven_sword",
        () -> new ElvenSword(
@@ -272,10 +287,10 @@ public class ElvenTools
         )
     );
 
-    // Creates a creative tab with the id "examplemod:example_tab" for the example item, that is placed after the combat tab
+    // Creates a creative tab with the id "elventools:cmode_tab" for the items, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> CMODE_TAB = CREATIVE_MODE_TABS.register("cmode_tab", () -> CreativeModeTab.builder()
             .withTabsBefore(CreativeModeTabs.COMBAT)
-            .icon(() -> ELVEN_BREAD.get().getDefaultInstance())
+            .icon(() -> ELVEN_SWORD_V2.get().getDefaultInstance())
             .title(Component.translatable(MODID + ".cmode_tab"))
             .displayItems((parameters, output) -> {
                     output.accept(RUBY_ORE_BLOCK.get());
@@ -285,7 +300,8 @@ public class ElvenTools
                     output.accept(ELVEN_PARSNIP.get());
                     output.accept(ROASTED_ELVEN_PARSNIP.get());
                     output.accept(ELVEN_CHERRY_TOMATOES.get());
-                    //output.accept(ELVEN_STEEL_INGOT.get());
+                    output.accept(ELVEN_CHERRY_TOMATOES_SEEDS.get());
+                    output.accept(PARSNIP_AND_POTATO_STEW.get());
                     output.accept(GOLD_COIN.get());
                     output.accept(GOLD_AND_RUBY_COIN.get());
                     output.accept(GOLD_AND_EMERALD_COIN.get());
@@ -330,9 +346,6 @@ public class ElvenTools
         // Some common setup code
         LOGGER.info("HELLO FROM COMMON SETUP");
 
-        // Wandering trader trades
-        //VillagerTrades.TRADES.put(new ResourceLocation("elventools", "wandering_trader_trades"), new CustomTradeLoader());
-
         if (Config.logDirtBlock)
             LOGGER.info("DIRT BLOCK >> {}", ForgeRegistries.BLOCKS.getKey(Blocks.DIRT));
 
@@ -340,19 +353,21 @@ public class ElvenTools
 
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
 
-        /* Making parsnip and cherry tomatoes compostable */
+        /* Making parsnip and cherry tomatoes and tomato seeds compostable */
         event.enqueueWork(() -> {
             ComposterBlock.COMPOSTABLES.put(ELVEN_PARSNIP.get(), 0.4F);
             ComposterBlock.COMPOSTABLES.put(ELVEN_CHERRY_TOMATOES.get(), 0.4F);
+            ComposterBlock.COMPOSTABLES.put(ELVEN_CHERRY_TOMATOES_SEEDS.get(), 0.15F);
         });
     
     }
 
-    // Add the example block item to the building blocks tab
+    // Add the ruby_ore_block_item and the ruby_block_item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
             event.accept(RUBY_ORE_BLOCK_ITEM);
+            event.accept(RUBY_BLOCK_ITEM);
     }
     // Adds trades
     private static void addTradesToWanderingTrader(List<ItemListing> generic, List<ItemListing> rare) {
@@ -388,6 +403,33 @@ public class ElvenTools
             (entity, random) -> new MerchantOffer(
                 new ItemCost(GOLD_COIN.get(), 1), //Asking for
                 new ItemStack(ELVEN_PARSNIP.get(), 3), //Selling
+                10, //Uses
+                5,  //XP
+                0.05F //Price multiplier
+            )
+        );
+        genericTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 1), //Asking for
+                new ItemStack(ELVEN_CHERRY_TOMATOES_SEEDS.get(), 3), //Selling
+                10, //Uses
+                5,  //XP
+                0.05F //Price multiplier
+            )
+        );
+        genericTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 5), //Asking for
+                new ItemStack(PARSNIP_AND_POTATO_STEW.get(), 1), //Selling
+                10, //Uses
+                5,  //XP
+                0.05F //Price multiplier
+            )
+        );
+        genericTrades.add(
+            (entity, random) -> new MerchantOffer(
+                new ItemCost(GOLD_COIN.get(), 1), //Asking for
+                new ItemStack(ELVEN_CHERRY_TOMATOES.get(), 2), //Selling
                 10, //Uses
                 5,  //XP
                 0.05F //Price multiplier

@@ -21,7 +21,7 @@ public class ElvenCherryTomatoesCropBlock extends CropBlock{
     
     @Override
     protected ItemLike getBaseSeedId() { 
-        return ElvenTools.ELVEN_CHERRY_TOMATOES.get();
+        return ElvenTools.ELVEN_CHERRY_TOMATOES_SEEDS.get();
     }
 
     @Override

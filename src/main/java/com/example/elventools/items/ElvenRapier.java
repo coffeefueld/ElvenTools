@@ -18,7 +18,7 @@ public class ElvenRapier extends SwordItem{
     
     @Override
     public void inventoryTick(ItemStack stack, Level level, Entity entity, int slot, boolean isSelected) {
-        if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player and 
+        if (entity instanceof Player player && !level.isClientSide()) { // Check if the entity is a player 
             player.addEffect(new MobEffectInstance(
                     MobEffects.LUCK,
                     60,                     // Duration in ticks, 20 ticks = 1 second
