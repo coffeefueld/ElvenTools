@@ -1,0 +1,24 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+      {
+        "item": "elventools:roasted_elven_parsnip"
+      },
+      {
+        "item": "elventools:elven_cherry_tomatoes"
+      }, 
+      {
+        "item": "minecraft:baked_potato"
+      },
+      {
+        "item": "minecraft:cooked_mutton"
+      },
+      {
+        "item": "minecraft:bowl"
+      }
+    ],
+    "result": {
+      "id": "elventools:parsnip_and_potato_stew",
+      "count": 1
+    }
+  }

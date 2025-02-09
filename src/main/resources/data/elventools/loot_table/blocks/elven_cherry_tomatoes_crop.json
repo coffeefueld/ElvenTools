@@ -14,16 +14,6 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "elventools:elven_cherry_tomatoes"
-            }
-          ]
-        },
-        {
-          "type": "minecraft:alternatives",
-          "children": [
-            {
-              "type": "minecraft:item",
-              "quality": 4,
               "conditions": [
                 {
                   "block": "elventools:elven_cherry_tomatoes_crop",
@@ -34,6 +24,10 @@
                 }
               ],
               "name": "elventools:elven_cherry_tomatoes"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "elventools:elven_cherry_tomatoes_seeds"
             }
           ]
         }
@@ -60,12 +54,12 @@
               "formula": "minecraft:binomial_with_bonus_count",
               "function": "minecraft:apply_bonus",
               "parameters": {
-                "extra": 3,
+                "extra": 2,
                 "probability": 0.5714286
               }
             }
           ],
-          "name": "elventools:elven_cherry_tomatoes"
+          "name": "elventools:elven_cherry_tomatoes_seeds"
         }
       ],
       "rolls": 1
