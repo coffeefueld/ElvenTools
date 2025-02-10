@@ -365,9 +365,10 @@ public class ElvenTools
     // Add the ruby_ore_block_item and the ruby_block_item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event)
     {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
             event.accept(RUBY_ORE_BLOCK_ITEM);
             event.accept(RUBY_BLOCK_ITEM);
+        }
     }
     // Adds trades
     private static void addTradesToWanderingTrader(List<ItemListing> generic, List<ItemListing> rare) {
