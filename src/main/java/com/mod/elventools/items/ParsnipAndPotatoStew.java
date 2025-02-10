@@ -1,4 +1,4 @@
-package com.example.elventools.items;
+package com.mod.elventools.items;
 
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;

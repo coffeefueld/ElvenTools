@@ -1,4 +1,4 @@
-package com.example.elventools;
+package com.mod.elventools;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;

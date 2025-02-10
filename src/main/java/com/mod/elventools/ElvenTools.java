@@ -1,18 +1,18 @@
-package com.example.elventools;
+package com.mod.elventools;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.slf4j.Logger;
 
-import com.example.elventools.blocks.ElvenCherryTomatoesCropBlock;
-import com.example.elventools.blocks.ElvenParsnipCropBlock;
-import com.example.elventools.items.ElvenPickaxe;
-import com.example.elventools.items.ElvenRapier;
-import com.example.elventools.items.ElvenSword;
-import com.example.elventools.items.ParsnipAndPotatoStew;
-import com.example.elventools.items.TheodoraAmulet;
-import com.example.elventools.items.TheodoraCharm;
+import com.mod.elventools.blocks.ElvenCherryTomatoesCropBlock;
+import com.mod.elventools.blocks.ElvenParsnipCropBlock;
+import com.mod.elventools.items.ElvenPickaxe;
+import com.mod.elventools.items.ElvenRapier;
+import com.mod.elventools.items.ElvenSword;
+import com.mod.elventools.items.ParsnipAndPotatoStew;
+import com.mod.elventools.items.TheodoraAmulet;
+import com.mod.elventools.items.TheodoraCharm;
 import com.mojang.logging.LogUtils;
 
 import net.minecraft.client.Minecraft;

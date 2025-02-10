@@ -1,4 +1,4 @@
-package com.example.elventools.items;
+package com.mod.elventools.items;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffectInstance;

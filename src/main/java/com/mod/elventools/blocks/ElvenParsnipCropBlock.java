@@ -1,6 +1,6 @@
-package com.example.elventools.blocks;
+package com.mod.elventools.blocks;
 
-import com.example.elventools.ElvenTools;
+import com.mod.elventools.ElvenTools;
 
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.block.Block;
