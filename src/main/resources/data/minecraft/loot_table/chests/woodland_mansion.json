@@ -7,7 +7,7 @@
           {
             "type": "minecraft:item",
             "name": "elventools:summoning_crystal",
-            "weight": 20
+            "weight": 25
           },
           {
             "type": "minecraft:item",
