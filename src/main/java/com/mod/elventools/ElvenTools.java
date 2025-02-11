@@ -11,6 +11,7 @@ import com.mod.elventools.items.ElvenPickaxe;
 import com.mod.elventools.items.ElvenRapier;
 import com.mod.elventools.items.ElvenSword;
 import com.mod.elventools.items.ParsnipAndPotatoStew;
+import com.mod.elventools.items.SummoningCrystal;
 import com.mod.elventools.items.TheodoraAmulet;
 import com.mod.elventools.items.TheodoraCharm;
 import com.mojang.logging.LogUtils;
@@ -286,6 +287,13 @@ public class ElvenTools
                     .fireResistant()
         )
     );
+    // Summoning Crystal
+    public static final RegistryObject<Item> SUMMONING_CRYSTAL = ITEMS.register("summoning_crystal",
+        () -> new SummoningCrystal(new Item.Properties()
+                    .stacksTo(1)
+                    .fireResistant()
+        )
+    );
 
     // Creates a creative tab with the id "elventools:cmode_tab" for the items, that is placed after the combat tab
     public static final RegistryObject<CreativeModeTab> CMODE_TAB = CREATIVE_MODE_TABS.register("cmode_tab", () -> CreativeModeTab.builder()
@@ -308,6 +316,7 @@ public class ElvenTools
                     output.accept(GOLD_AND_STAR_COIN.get());
                     output.accept(THEODORA_CHARM.get());
                     output.accept(THEODORA_AMULET.get());
+                    output.accept(SUMMONING_CRYSTAL.get());
                     output.accept(ELVEN_SWORD.get());
                     output.accept(ELVEN_SWORD_V2.get());
                     output.accept(ELVEN_RAPIER.get());
