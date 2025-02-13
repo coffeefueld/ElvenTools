@@ -29,8 +29,10 @@ Ruby item that the player can get by smelting or blasting the ruby ore block.
 ### - Ruby Block
 Ruby block that can be crafted from 9 ruby items.
 <p align="center">
-  ![ ](img/2025-02-13_16-15.png)
+  <img src="img/2025-02-13_16-15.png">
 </p>
+
+![ ](img/2025-02-13_16-15.png)
 ### - Elven Bread
 Elven bread slice that can be purchased from the wandering trader using gold coins. It gives the player 8 saturation and 8 nutrition.
 ### - Elven Parsnip
