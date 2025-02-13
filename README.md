@@ -14,6 +14,10 @@ $ ./gradlew runClient
 ```
 ### Through the .jar file
 Download the .jar file and place it in the mods directory of your minecraft forge mods.
+
+## Testing
+This mod was tested on Windows 11, Arch Linux and Ubuntu operating systems, and it doesn't interfere with the use of other mods.
+
 ## Lore
 Thousands of years ago, elves roamed the world. Long before they were banished to the Nether, the piglins and the elves lived together in harmony, but everything changed when the piglins attacked. The ensuing war was long, the battles brutal and bloody. Both sides took heavy losses, but the elves were hit the hardest; unprepared as they were for such a war, their forces held the lines for as long as they could but eventually retreated against the hordes of the piglin armies. As the war waged, more and more cities were lost as the elves were forced to retreat further into their kingdom.
 
@@ -125,21 +129,23 @@ Can be crafted using the Theodora charm and four chains, has the same atributes 
 
 ### - Summoning Crystal
 Can be found in dunegeon, pyramid, nether fortresses chests and in more structures around the world. When used it will summon the Wandering Trader.
-### Elven Sword
+### - Elven Sword
 Made from elven steel and emits light, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
 
 **Fist Variation:** Has 19 attack damage and 2.5 attack speed
 
 **Second Variation** Has 21 attack damage and 1.8 attack speed
-### Elven Rapier
+### - Elven Rapier
 Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
 
 **Fist Variation:** Has 13 attack damage and 6 attack speed
 
 **Second Variation:** Has 14 attack damage and 5.5 attack speed
-### Elven Pickaxe
+### - Elven Pickaxe
 Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the tool.
 
 **Fist Variation:** Has 8 attack damage and 1.2 attack speed
 
 **Second Variation:** Has 12 attack damage and 0.5 attack speed
+### - Wandering Trader
+We reskinned the wandering trader to look more like an elf that's traveling in disguise. We also gave him new trades, removing the old ones. He accepts gold, gold and ruby, gold and emerald, and gold and star coins in exchange for his wares. The player can either wait for him to spawn normally or they can summon him using a summoning crystal.
