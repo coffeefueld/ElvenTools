@@ -51,7 +51,9 @@ Can be crafted from a gold coin and a nether star and is used to purchase the Th
 ### - Theodora Charm
 Protective charm that gives the player luck level 2 and ,when held, speed level 3, invisibility level 2, and resistance level 3.
 ### - Theodora Amulet 
-Can be crafted using the Theodora charm and four chains, has the same atributes as the Theodora charm
+Can be crafted using the Theodora charm and four chains, has the same atributes as the Theodora charm.
+### - Summoning Crystal
+Can be found in dunegeon, pyramid, nether fortresses chests and in more structures around the world. When used it will summon the Wandering Trader.
 ### Elven Sword
 Made from elven steel and emits light, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
 
