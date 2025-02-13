@@ -17,13 +17,13 @@ public class SummoningCrystal extends Item {
     @Override
     public InteractionResult useOn(UseOnContext context) {
         Level level = context.getLevel();
-        if (!level.isClientSide) {
-            WanderingTrader entity = EntityType.WANDERING_TRADER.create(level);
-            if (entity != null) {
-                BlockPos pos = context.getClickedPos().relative(context.getClickedFace());
-                entity.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, level.random.nextFloat() * 360F, 0);
-                level.addFreshEntity(entity);
-                context.getItemInHand().shrink(1); // Consume item if necessary
+        if (!level.isClientSide) { // Checks if it's server side
+            WanderingTrader trader = EntityType.WANDERING_TRADER.create(level); // Entity to spawn
+            if (trader != null) {
+                BlockPos pos = context.getClickedPos().relative(context.getClickedFace()); 
+                trader.moveTo(pos.getX() + 0.5, pos.getY(), pos.getZ() + 0.5, level.random.nextFloat() * 360F, 0); // Position to spawn the trader
+                context.getItemInHand().shrink(1); // Consumes item
+                level.addFreshEntity(trader); // Spawns trader   
             }
         }
         return InteractionResult.sidedSuccess(level.isClientSide);
