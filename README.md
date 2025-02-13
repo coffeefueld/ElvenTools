@@ -9,12 +9,12 @@
 ### Through gradle
 #### Step 1
 Clone the repository
-```Bash/Zsh
+```Zsh
 git clone https://github.com/coffeefueld/ElvenTools
 ```
 #### Step 2
 Run the client
-```Bash/Zsh
+```Zsh
 ./gradlew runClient
 ```
 ### Through the .jar file
