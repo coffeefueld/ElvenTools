@@ -201,7 +201,7 @@ Every trader will have six trades. The first five are common trades, and are the
 </p>
 
 ### - Creative Mode Tab
-We added an ElvenTools tab in the inventory that is available when the player is in creative mode, and it's after the combat tab.
+We added an ElvenTools tab in the inventory that is available when the player is in creative mode. It is located after the combat tab.
 <p align="center">
   <img src="img/2025-02-13_16-28.png">
 </p>
