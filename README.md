@@ -10,12 +10,12 @@
 #### Step 1
 Clone the repository
 ```Bash/Zsh
-$ git clone https://github.com/coffeefueld/ElvenTools
+git clone https://github.com/coffeefueld/ElvenTools
 ```
 #### Step 2
 Run the client
 ```Bash/Zsh
-$ ./gradlew runClient
+./gradlew runClient
 ```
 ### Through the .jar file
 Download the .jar file and place it in the mods directory of your minecraft forge mods.
