@@ -32,17 +32,17 @@ Ruby item that the player can get by smelting or blasting the ruby ore block. Th
 <p align="center">
   <img src="img/2025-02-13_16-18.png">
 </p>
-
 <p align="center">
   <img src="img/2025-02-13_16-16.png">
 </p>
+
 ### - Ruby Block
 Ruby block that can be crafted from 9 ruby items.
 <p align="center">
-  <img src="img/2025-02-13_16-15.png">
+  <img src="img/2025-02-13_16-31.png">
 </p>
 <p align="center">
-  <img src="img/2025-02-13_16-31.png">
+  <img src="img/2025-02-13_16-15.png">
 </p>
 
 ### - Elven Bread
