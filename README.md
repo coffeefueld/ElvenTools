@@ -16,7 +16,7 @@ $ ./gradlew runClient
 Download the .jar file and place it in the mods directory of your minecraft forge mods.
 
 ## Testing
-This mod was tested on Windows 11, Arch Linux and Ubuntu operating systems, and it doesn't interfere with the use of other mods.
+This mod was tested on Windows 11, Arch Linux, and Ubuntu operating systems, and it doesn't interfere with the use of other mods.
 
 ## Lore
 Thousands of years ago, elves roamed the world. Long before they were banished to the Nether, the piglins and the elves lived together in harmony, but everything changed when the piglins attacked. The ensuing war was long, the battles brutal and bloody. Both sides took heavy losses, but the elves were hit the hardest; unprepared as they were for such a war, their forces held the lines for as long as they could but eventually retreated against the hordes of the piglin armies. As the war waged, more and more cities were lost as the elves were forced to retreat further into their kingdom.
