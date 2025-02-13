@@ -17,9 +17,9 @@ Download the .jar file and place it in the mods directory of your minecraft forg
 ## Lore
 Thousands of years ago, elves roamed the world. Long before they were banished to the Nether, the piglins and the elves lived together in harmony, but everything changed when the piglins attacked. The ensuing war was long, the battles brutal and bloody. Both sides took heavy losses, but the elves were hit the hardest; unprepared as they were for such a war, their forces held the lines for as long as they could but eventually retreated against the hordes of the piglin armies. As the war waged, more and more cities were lost as the elves were forced to retreat further into their kingdom.
 
-In one of the final battles, fought on the field on the outskirts of one of the last elven cities that hadn't fallen, the Grand General Theodora made her last stand. The elves had been holding the lines for days, scrambling to reform the front line as the piglins battered their depleting army with their hordes of beasts, and waiting for reinforcements. Theodora, looking at her soldiers now dying around her, realised they wouldn't last until the reinforcements came. In a desperate, last attempt to save her people, Theodora ordered all but her most trusted and beloved warriors to retreat.Together they gathered, rallying every last drop of their magic, and performed an ancient, powerful spell. It was madness, a fool's wish, but as the pigling armies were gathering around them, it worked. With the last bits of their magic and their lifeblood, Theodora and her warriors cast a protective spell, a shield, over the city that made it invisible and deflected attacks. The shield held for two days and two nights, giving the elves valuable time to gather the little that remained of their forces. On the eve of the third day, the reinforcements had arrived. The elves fought hard and with renewed vigour, managing to push back the pigling forces and thus starting the streak of victories for the elves that led to the end of the war.In the aftermath, the remaining piglings were exiled to the Nether as the new treaty demanded.
+In one of the final battles, fought on the field on the outskirts of one of the last elven cities that hadn't fallen, the Grand General Theodora made her last stand. The elves had been holding the lines for days, scrambling to reform the front line as the piglins battered their depleting army with their hordes of beasts, and waiting for reinforcements. Theodora, looking at her soldiers now dying around her, realised they wouldn't last until the reinforcements came. In a desperate, last attempt to save her people, Theodora ordered all but her most trusted and beloved warriors to retreat.Together they gathered, rallying every last drop of their magic, and performed an ancient, powerful spell. It was madness, a fool's wish, but as the piglin armies were gathering around them, it worked. With the last bits of their magic and their lifeblood, Theodora and her warriors cast a protective spell, a shield, over the city that made it invisible and deflected attacks. The shield held for two days and two nights, giving the elves valuable time to gather the little that remained of their forces. On the eve of the third day, the reinforcements had arrived. The elves fought hard and with renewed vigour, managing to push back the pigling forces and thus starting the streak of victories for the elves that led to the end of the war.In the aftermath, the remaining piglings were exiled to the Nether as the new treaty demanded.
 
-From then on, the elves decided to keep themselves and their cities hidden, allowing no outsiders in. In honour of their fallen General they started making protective charms and amulets named after her that grant the wearer speed, invisibility, resistance, and luck, symbolising her sacrifice and making sure she is never forgotten. Only a select few elves decide to venture outside the walls of their gilded cities, disguising themselves as traders and travelling the world, selling their wares.
+From then on, the elves decided to keep themselves and their cities hidden, allowing no outsiders in. In honour of their fallen General they started making protective charms and amulets named after her that grant the wearer speed, invisibility, resistance, and luck, symbolising her sacrifice and making sure she is never forgotten. Only a handful of elves decide to venture outside the walls of their gilded cities, disguising themselves as traders and travelling the world, selling their wares.
 
 ## Features
 ### - Ruby Ore Block
@@ -44,7 +44,7 @@ Can be purchased from the wandering trader using gold coins, as well as crafted 
 Can be crafted using 8 gold nuggets and 1 copper ingot, it's used to purchase common items from the wandering trader.
 ### - Gold And Ruby Coin
 Can be crafted from a gold coin and a ruby and is used to purchase rare items from the wandering trader.
-### - Cold And Emerald Coin 
+### - Gold And Emerald Coin 
 Can be crafted from a gold coin and an emerald and is used to purchase rare items from the wandering trader.
 ### - Gold and Star Coin
 Can be crafted from a gold coin and a nether star and is used to purchase the Theodora charm from the wandering trader.
@@ -65,10 +65,10 @@ Made from elven steel, can be purchased from the wandering trader using gold and
 
 **Fist Variation:** Has 13 attack damage and 6 attack speed
 
-**Second Variation** Has 14 attack damage and 5.5 attack speed
+**Second Variation:** Has 14 attack damage and 5.5 attack speed
 ### Elven Pickaxe
 Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the tool.
 
 **Fist Variation:** Has 8 attack damage and 1.2 attack speed
 
-**Second Variation** Has 12 attack damage and 0.5 attack speed
+**Second Variation:** Has 12 attack damage and 0.5 attack speed
