@@ -25,38 +25,104 @@ From then on, the elves decided to keep themselves and their cities hidden, allo
 ### - Ruby Ore Block
 We've added a mineable ruby ore that spawns 7 veins of three per chuck at y levels 75 to 0. 
 ### - Ruby
-Ruby item that the player can get by smelting or blasting the ruby ore block.
+Ruby item that the player can get by smelting or blasting the ruby ore block. They can also get it by un-crafting a ruby block.
+<p align="center">
+  <img src="img/2025-02-13_16-31_1.png">
+</p>
+<p align="center">
+  <img src="img/2025-02-13_16-18.png">
+</p>
+
+<p align="center">
+  <img src="img/2025-02-13_16-16.png">
+</p>
 ### - Ruby Block
 Ruby block that can be crafted from 9 ruby items.
 <p align="center">
   <img src="img/2025-02-13_16-15.png">
 </p>
+<p align="center">
+  <img src="img/2025-02-13_16-31.png">
+</p>
 
-![ ](img/2025-02-13_16-15.png)
 ### - Elven Bread
 Elven bread slice that can be purchased from the wandering trader using gold coins. It gives the player 8 saturation and 8 nutrition.
+<p align="center">
+  <img src="img/2025-02-13_16-33.png">
+</p>
+
 ### - Elven Parsnip
 We've added and elven parsnip crop that, when fully grown, drops 2 to 5 parsnips, and 1 parsnip if it's broken before its ready to be harvested. The elven parsnips can be purchased from the wandering trader using gold coins and planted. When eaten it gives the player 1 nutrition and 2 saturation.
+<p align="center">
+  <img src="img/2025-02-13_16-33_1.png">
+</p>
+
 ### - Roasted Elven Parsnip
 Elven parsnips can be smelted and smoked to produce roasted parsnips. When eaten it gives the player 4 nutrition and 3 saturation.
+<p align="center">
+  <img src="img/2025-02-13_16-34.png">
+</p>
+<p align="center">
+  <img src="img/2025-02-13_16-19.png">
+</p>
+
 ### - Elven Cherry Tomatoes
 Elven cherry tomatoes can be purchased from the wandering trader using gold coins. When eaten they give the player 3 nutrition and 2 saturation.
+<p align="center">
+  <img src="img/2025-02-13_16-35.png">
+</p>
+
 ### - Elven Cherry Tomatoes Seeds
 The elven cherry tomatoes seeds can be purchased from the wondering trader using gold coins and planted. The elven cherry tomatoes crop, when fully grown, drops 1 elven cherry tomatoes item and 1 to 3 seeds, and 1 seed if broken before it's ready to be harvested.
+<p align="center">
+  <img src="img/2025-02-13_16-37.png">
+</p>
+
 ### - Parsnip And Potato Stew
 Can be purchased from the wandering trader using gold coins, as well as crafted using a shapeless recipe consisting of roasted elven parsnip, elven cherry tommatoes, baked potatoes, cooked mutton and a bowl. When eated it returns an empty bowl, and gives the player 3 saturation, 15 nutrition, and level 2 regenaration for 8 minutes.
+<p align="center">
+  <img src="img/2025-02-13_16-41.png">
+</p>
+<p align="center">
+  <img src="img/2025-02-13_16-42.png">
+</p>
+
 ### - Gold Coin
 Can be crafted using 8 gold nuggets and 1 copper ingot, it's used to purchase common items from the wandering trader.
+<p align="center">
+  <img src="img/2025-02-13_16-43.png">
+</p>
+<p align="center">
+  <img src="img/2025-02-13_16-22.png">
+</p>
+
 ### - Gold And Ruby Coin
 Can be crafted from a gold coin and a ruby and is used to purchase rare items from the wandering trader.
+<p align="center">
+  <img src="img/2025-02-13_16-23_1.png">
+</p>
+
 ### - Gold And Emerald Coin 
 Can be crafted from a gold coin and an emerald and is used to purchase rare items from the wandering trader.
+<p align="center">
+  <img src="img/2025-02-13_16-23.png">
+</p>
+
 ### - Gold and Star Coin
 Can be crafted from a gold coin and a nether star and is used to purchase the Theodora charm from the wandering trader.
+<p align="center">
+  <img src="img/2025-02-13_16-24.png">
+</p>
+
 ### - Theodora Charm
 Protective charm that gives the player luck level 2 and ,when held, speed level 3, invisibility level 2, and resistance level 3.
+
 ### - Theodora Amulet 
 Can be crafted using the Theodora charm and four chains, has the same atributes as the Theodora charm.
+<p align="center">
+  <img src="img/2025-02-13_16-24_1.png">
+</p>
+
 ### - Summoning Crystal
 Can be found in dunegeon, pyramid, nether fortresses chests and in more structures around the world. When used it will summon the Wandering Trader.
 ### Elven Sword
