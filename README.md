@@ -193,3 +193,15 @@ We reskinned the wandering trader to look more like an elf that's traveling in d
 <p align="center">
   <img src="img/2025-02-13_21-27.png">
 </p>
+
+### - Wandering Trader Trades
+Every trader will have six trades. The first five are common trades, and are the same for every trader. The sixth is a randomised rare trade, meaning that all traders won't carry the same item and that the player can only purchase one rare item per trader.
+<p align="center">
+  <img src="img/2025-02-13_21-32.png">
+</p>
+
+### - Creative Mode Tab
+We added an ElvenTools tab in the inventory that is available when the player is in creative mode, and it's after the combat tab.
+<p align="center">
+  <img src="img/2025-02-13_16-28.png">
+</p>
