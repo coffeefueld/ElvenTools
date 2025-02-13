@@ -212,3 +212,5 @@ We added an ElvenTools tab in the inventory that is available when the player is
 </p>
 ## Development
 This mod was developed in 2025 as a Java language project for the Informatics Department of the Ionian University of Greece by Agamemnon Kordonis and Olga Ilektra Katopodi.
+## Development
+This mod was developed in 2025 as a Java language project for the Informatics Department of the Ionian University of Greece by Agamemnon Kordonis and Olga Ilektra Katopodi.
