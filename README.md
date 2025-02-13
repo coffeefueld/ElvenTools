@@ -103,11 +103,17 @@ Can be crafted using 8 gold nuggets and 1 copper ingot, it's used to purchase co
 ### - Gold And Ruby Coin
 Can be crafted from a gold coin and a ruby and is used to purchase rare items from the wandering trader.
 <p align="center">
+  <img src="img/2025-02-13_19-12.png">
+</p>
+<p align="center">
   <img src="img/2025-02-13_16-23_1.png">
 </p>
 
 ### - Gold And Emerald Coin 
 Can be crafted from a gold coin and an emerald and is used to purchase rare items from the wandering trader.
+<p align="center">
+  <img src="img/2025-02-13_19-13.png">
+</p>
 <p align="center">
   <img src="img/2025-02-13_16-23.png">
 </p>
@@ -115,37 +121,71 @@ Can be crafted from a gold coin and an emerald and is used to purchase rare item
 ### - Gold and Star Coin
 Can be crafted from a gold coin and a nether star and is used to purchase the Theodora charm from the wandering trader.
 <p align="center">
+  <img src="img/2025-02-13_19-14.png">
+</p>
+<p align="center">
   <img src="img/2025-02-13_16-24.png">
 </p>
 
 ### - Theodora Charm
 Protective charm that gives the player luck level 2 and ,when held, speed level 3, invisibility level 2, and resistance level 3.
+<p align="center">
+  <img src="img/2025-02-13_16-24.png">
+</p>
 
 ### - Theodora Amulet 
 Can be crafted using the Theodora charm and four chains, has the same atributes as the Theodora charm.
 <p align="center">
-  <img src="img/2025-02-13_16-24_1.png">
+  <img src="img/2025-02-13_19-15.png">
 </p>
 
 ### - Summoning Crystal
 Can be found in dunegeon, pyramid, nether fortresses chests and in more structures around the world. When used it will summon the Wandering Trader.
+<p align="center">
+  <img src="img/2025-02-13_19-16.png">
+</p>
+
 ### - Elven Sword
 Made from elven steel and emits light, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
 
 **Fist Variation:** Has 19 attack damage and 2.5 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-17.png">
+</p>
 
 **Second Variation** Has 21 attack damage and 1.8 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-18.png">
+</p>
+
 ### - Elven Rapier
 Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
 
 **Fist Variation:** Has 13 attack damage and 6 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-18_1.png">
+</p>
 
 **Second Variation:** Has 14 attack damage and 5.5 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-19.png">
+</p>
+
 ### - Elven Pickaxe
 Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the tool.
 
 **Fist Variation:** Has 8 attack damage and 1.2 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-20.png">
+</p>
 
 **Second Variation:** Has 12 attack damage and 0.5 attack speed
+<p align="center">
+  <img src="img/2025-02-13_19-20_1.png">
+</p>
+
 ### - Wandering Trader
 We reskinned the wandering trader to look more like an elf that's traveling in disguise. We also gave him new trades, removing the old ones. He accepts gold, gold and ruby, gold and emerald, and gold and star coins in exchange for his wares. The player can either wait for him to spawn normally or they can summon him using a summoning crystal.
+<p align="center">
+  <img src="">
+</p>
