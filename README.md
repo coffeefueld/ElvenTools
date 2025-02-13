@@ -1,5 +1,7 @@
 # Elven Tools
 *A minecraft 1.21.1 mod*
+## Video Demonstration
+Due to some technical difficulties the video demonstration will be up within the span of the next two days
 ## Prerequisites
 ### The mod was developed with and requires:
   - Minecraft 1.21.1
@@ -211,5 +213,9 @@ We added an ElvenTools tab in the inventory that is available when the player is
   <img src="img/2025-02-13_16-28.png">
 </p>
 
+## Video Demonstration
+Due to some technical difficulties the video demonstration will be up within the span of the next two days
+
 ## Development
 This mod was developed in 2025 as a Java language project for the Informatics Department of the Ionian University of Greece by Agamemnon Kordonis and Olga Ilektra Katopodi.
+
