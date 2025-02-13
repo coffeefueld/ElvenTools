@@ -1,6 +1,6 @@
 # Elven Tools
 *A minecraft 1.21.1 mod*
-## Prerequisite
+## Prerequisites
 ### The mod was developed with and requires:
   - Minecraft 1.21.1
   - Forge 52.0.40
