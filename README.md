@@ -128,7 +128,7 @@ Can be crafted from a gold coin and a nether star and is used to purchase the Th
 </p>
 
 ### - Theodora Charm
-Protective charm that gives the player luck level 2 and ,when held, speed level 3, invisibility level 2, and resistance level 3.
+Protective charm that gives the player luck level 2 and, when held, speed level 3, invisibility level 2, and resistance level 3.
 <p align="center">
   <img src="img/2025-02-13_19-15.png">
 </p>
