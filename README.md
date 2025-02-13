@@ -1,6 +1,11 @@
 # Elven Tools
-*A minecraft mod*
-## Instalation instructions
+*A minecraft 1.21.1 mod*
+## Prerequisite
+### The was developed with and requires:
+  #### - Minecraft 1.21.1
+  #### - Forge 52.0.40
+  #### - Java 21
+## Installation instructions
 ### Through gradle
 #### Step 1
 Clone the repository
