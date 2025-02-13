@@ -210,3 +210,5 @@ We added an ElvenTools tab in the inventory that is available when the player is
 <p align="center">
   <img src="img/2025-02-13_16-28.png">
 </p>
+## Development
+This mod was developed in 2025 as a Java language project for the Informatics Department of the Ionian University of Greece by Agamemnon Kordonis and Olga Ilektra Katopodi.
