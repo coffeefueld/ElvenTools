@@ -130,13 +130,13 @@ Can be crafted from a gold coin and a nether star and is used to purchase the Th
 ### - Theodora Charm
 Protective charm that gives the player luck level 2 and ,when held, speed level 3, invisibility level 2, and resistance level 3.
 <p align="center">
-  <img src="img/2025-02-13_16-24.png">
+  <img src="img/2025-02-13_19-15.png">
 </p>
 
 ### - Theodora Amulet 
 Can be crafted using the Theodora charm and four chains, has the same atributes as the Theodora charm.
 <p align="center">
-  <img src="img/2025-02-13_19-15.png">
+  <img src="img/2025-02-13_19-15_1.png">
 </p>
 
 ### - Summoning Crystal
