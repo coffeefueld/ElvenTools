@@ -28,6 +28,10 @@ From then on, the elves decided to keep themselves and their cities hidden, allo
 ## Features
 ### - Ruby Ore Block
 We've added a mineable ruby ore that spawns 7 veins of three per chuck at y levels 75 to 0. 
+<p align="center">
+  <img src="img/2025-02-13_21-22.png">
+</p>
+
 ### - Ruby
 Ruby item that the player can get by smelting or blasting the ruby ore block. They can also get it by un-crafting a ruby block.
 <p align="center">
@@ -146,7 +150,7 @@ Can be found in dunegeon, pyramid, nether fortresses chests and in more structur
 </p>
 
 ### - Elven Sword
-Made from elven steel and emits light, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
+Made from elven steel and emits light, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon. Gives the player luck 2 when it is held or is in the inventory.
 
 **Fist Variation:** Has 19 attack damage and 2.5 attack speed
 <p align="center">
@@ -159,7 +163,7 @@ Made from elven steel and emits light, can be purchased from the wandering trade
 </p>
 
 ### - Elven Rapier
-Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon.
+Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the weapon. Gives the player luck 2 when it is held or is in the inventory.
 
 **Fist Variation:** Has 13 attack damage and 6 attack speed
 <p align="center">
@@ -172,7 +176,7 @@ Made from elven steel, can be purchased from the wandering trader using gold and
 </p>
 
 ### - Elven Pickaxe
-Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the tool.
+Made from elven steel, can be purchased from the wandering trader using gold and ruby or gold and emerald coins. There are two variations of the tool. Gives the player luck 2 when it is held or is in the inventory.
 
 **Fist Variation:** Has 8 attack damage and 1.2 attack speed
 <p align="center">
@@ -187,5 +191,5 @@ Made from elven steel, can be purchased from the wandering trader using gold and
 ### - Wandering Trader
 We reskinned the wandering trader to look more like an elf that's traveling in disguise. We also gave him new trades, removing the old ones. He accepts gold, gold and ruby, gold and emerald, and gold and star coins in exchange for his wares. The player can either wait for him to spawn normally or they can summon him using a summoning crystal.
 <p align="center">
-  <img src="">
+  <img src="img/2025-02-13_21-27.png">
 </p>
