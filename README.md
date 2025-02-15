@@ -4,7 +4,7 @@
 
 <p align="center">
   <a href="https://www.youtube.com/watch?v=JQGcSN-qY2Q">
-    <img src="https://img.youtube.com/vi/JQGcSN-qY2Q/0.jpg" width="1280" height="720" alt="Demonstration Video">
+    <img src="https://img.youtube.com/vi/JQGcSN-qY2Q/0.jpg" width="480" height="360" alt="Demonstration Video">
   </a>
 </p>
 
