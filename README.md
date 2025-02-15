@@ -1,7 +1,13 @@
 # Elven Tools
 *A minecraft 1.21.1 mod*
 ## Video Demonstration
-[![Demonstration Video](https://img.youtube.com/vi/JQGcSN-qY2Q/0.jpg)](https://www.youtube.com/watch?v=JQGcSN-qY2Q)
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=JQGcSN-qY2Q">
+    <img src="https://img.youtube.com/vi/JQGcSN-qY2Q/0.jpg" width="1280" height="720" alt="Demonstration Video">
+  </a>
+</p>
+
 ## Prerequisites
 ### The mod was developed with and requires:
   - Minecraft 1.21.1
