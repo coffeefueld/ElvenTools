@@ -58,7 +58,7 @@ public class TheodoraAmulet extends Item implements Equipable{
             player.addEffect(new MobEffectInstance(
                     MobEffects.LUCK,
                     60,                     // Duration in ticks, 20 ticks = 1 second
-                    9,                      // Amplifier, 0 = level I, 1 = level II...
+                    3,                      // Amplifier, 0 = level I, 1 = level II...
                     true,                   // Ambient effect
                     false,                  // Show particles
                     false                   // Show effect icon
