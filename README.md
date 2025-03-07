@@ -150,7 +150,7 @@ Can be crafted using the Theodora charm and four chains, has the same atributes 
   <img src="img/2025-02-13_19-15_1.png">
 </p>
 <p align="center">
-  <img src="img/2025-02-13_19-24_1.png">
+  <img src="img/2025-02-13_16-24_1.png">
 </p>
 
 ### - Summoning Crystal
