@@ -39,10 +39,12 @@ From then on, the elves decided to keep themselves and their cities hidden, allo
 ## Features
 ### - Ruby Ore Block
 We've added a mineable ruby ore that spawns 10 veins of three per chuck at y levels 75 to -80. 
+
 **Ruby Ore:**
 <p align="center">
   <img src="img/2025-02-13_21-22.png">
 </p>
+
 **Deepslate Ruby Ore:**
 <p align="center">
   <img src="img/2025-03-07_17-23.png">
