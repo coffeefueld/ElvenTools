@@ -4,7 +4,7 @@
     "cookingtime": 100,
     "experience": 0.35,
     "ingredient": {
-      "item": "elventools:deepslate_ruby_ore_block"
+      "item": "elventools:ruby_ore_block"
     },
     "result": {
       "id": "elventools:ruby"
