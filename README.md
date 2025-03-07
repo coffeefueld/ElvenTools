@@ -149,6 +149,9 @@ Can be crafted using the Theodora charm and four chains, has the same atributes 
 <p align="center">
   <img src="img/2025-02-13_19-15_1.png">
 </p>
+<p align="center">
+  <img src="img/2025-02-13_19-24_1.png">
+</p>
 
 ### - Summoning Crystal
 Can be found in dunegeon, pyramid, nether fortresses chests and in more structures around the world. When used it will summon the Wandering Trader.
