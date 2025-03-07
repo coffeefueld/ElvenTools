@@ -2,6 +2,8 @@
 *A minecraft 1.21.1 mod*
 ## Video Demonstration
 [Demonstration Video](https://www.youtube.com/watch?v=JQGcSN-qY2Q)
+## NeoForge Version
+[Neoforge Version](https://github.com/coffeefueld/ElvenTools-NeoForge)
 ## CurseForge Page
 [CurseForge](https://www.curseforge.com/minecraft/mc-mods/elven-tools)
 ## Prerequisites
